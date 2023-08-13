@@ -7,7 +7,7 @@ const $done = document.getElementById("done")
 
 let words = JSON.parse(localStorage.getItem('words') || '[]')
 
-let word, guesses, mode
+let word, guesses, mode, reveal = false
 
 const search = location.search.slice(1)
 if(search == 'edit' || words.length == 0) {
@@ -47,14 +47,23 @@ function setupHangman(w){
   $main.classList.remove('hide')
   render()
   document.body.onkeydown = e => {
-    if (/^[a-z]$/i.test(e.key)) guess(e.key.toLowerCase())
+    if (!e.ctrlKey && !e.shiftKey && !e.metaKey && /^[a-z]$/i.test(e.key))
+      guess(e.key.toLowerCase())
+    if (e.metaKey && e.key == 'i') {
+      reveal = true
+      render()
+      document.body.addEventListener('keyup', () => {
+        reveal = false
+        render()
+      }, {once:true})
+    }
   }
 }
 
 function render() {
   $phrase.innerHTML = word.split('').map(letter => {
     if (letter === ' ') return `<span class="space"></span>`
-    if (letter.toLowerCase() in guesses) return `<span class="letter">${letter}</span>`
+    if (letter.toLowerCase() in guesses || reveal) return `<span class="letter">${letter}</span>`
     return `<span class="letter blank"></span>`
   }).join('')
   
