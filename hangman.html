@@ -1,0 +1,47 @@
+<html>
+<head>
+  <title>Hangman</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="menu">
+    <div class="edit-container">
+      <textarea id="edit" class="hide" rows="10" cols="50"></textarea>
+      <button id="done" class="hide">Done</button>
+    </div>
+    <div id="options" class="hide"></div>
+  </div>
+  <div id="main" class="hide">
+    <p id="phrase"></p>
+    <div id="letters">
+      <div class="guess a" onclick="guess('a')">a</div>
+      <div class="guess b" onclick="guess('b')">b</div>
+      <div class="guess c" onclick="guess('c')">c</div>
+      <div class="guess d" onclick="guess('d')">d</div>
+      <div class="guess e" onclick="guess('e')">e</div>
+      <div class="guess f" onclick="guess('f')">f</div>
+      <div class="guess g" onclick="guess('g')">g</div>
+      <div class="guess h" onclick="guess('h')">h</div>
+      <div class="guess i" onclick="guess('i')">i</div>
+      <div class="guess j" onclick="guess('j')">j</div>
+      <div class="guess k" onclick="guess('k')">k</div>
+      <div class="guess l" onclick="guess('l')">l</div>
+      <div class="guess m" onclick="guess('m')">m</div>
+      <div class="guess n" onclick="guess('n')">n</div>
+      <div class="guess o" onclick="guess('o')">o</div>
+      <div class="guess p" onclick="guess('p')">p</div>
+      <div class="guess q" onclick="guess('q')">q</div>
+      <div class="guess r" onclick="guess('r')">r</div>
+      <div class="guess s" onclick="guess('s')">s</div>
+      <div class="guess t" onclick="guess('t')">t</div>
+      <div class="guess u" onclick="guess('u')">u</div>
+      <div class="guess v" onclick="guess('v')">v</div>
+      <div class="guess w" onclick="guess('w')">w</div>
+      <div class="guess x" onclick="guess('x')">x</div>
+      <div class="guess y" onclick="guess('y')">y</div>
+      <div class="guess z" onclick="guess('z')">z</div>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>

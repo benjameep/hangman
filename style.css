@@ -1,0 +1,128 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+#main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+}
+
+#phrase {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#phrase span {
+  height: 50px;
+  width: 50px;
+  margin: 20px 10px;
+  font-size: 50px;
+  text-align: center;
+  line-height: 50px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: #333;
+  text-transform: uppercase;
+}
+
+.letter {
+  border-bottom: 3px solid black;
+}
+
+#letters {
+  /* position: absolute; */
+  /* bottom: 0; */
+  max-width: 900px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  user-select: none;
+}
+
+#letters .guess {
+  height: 50px;
+  width: 50px;
+  margin: 7px;
+  padding: 7px;
+  font-size: 50px;
+  text-align: center;
+  line-height: 50px;
+  font-weight: 300;
+  color: #c8c8c8;
+  border: 3px solid #c8c8c8;
+  border-radius: 7px;
+  text-transform: uppercase;
+}
+
+#letters .guess:hover {
+  cursor: pointer;
+  background-color: #eeebeb;
+  border-color: black;
+  color: black;
+}
+
+#letters .guess.correct {
+  color: #09ab00;
+  border-color: #09ab00;
+  background-color: #e5fee4
+}
+
+#letters .guess.incorrect {
+  color: #ab0000;
+  border-color: #ab0000;
+  background-color: #fee4e4;
+}
+
+.hide {
+  display: none !important;
+}
+
+#menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20vh;
+  flex-direction: column;
+}
+
+#options {
+  display: flex;
+  flex-direction: column;
+}
+
+#options a {
+  font-size: 30px;
+  padding: 10px 30px;
+  border: #333 1px solid;
+  border-radius: 5px;
+  margin: 10px;
+  background-color: #fcfcfc;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+.edit-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+#done {
+  margin-left: 10px;
+  padding: 10px;
+  border: #333 1px solid;
+  border-radius: 5px;
+  background-color: #fcfcfc;
+}
+
+#done:hover {
+  cursor: pointer;
+  background-color: #eeebeb;
+}
