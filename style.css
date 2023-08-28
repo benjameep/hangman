@@ -29,6 +29,10 @@ body {
   text-transform: uppercase;
 }
 
+#phrase .punc {
+  width: initial;
+}
+
 .letter {
   border-bottom: 3px solid black;
 }
@@ -96,6 +100,7 @@ body {
 }
 
 #options a {
+  text-align: justify;
   font-size: 30px;
   padding: 10px 30px;
   border: #333 1px solid;
@@ -104,6 +109,25 @@ body {
   background-color: #fcfcfc;
   letter-spacing: 1px;
   text-decoration: none;
+  color: #333;
+}
+
+#options a:after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+}
+
+#options a:hover {
+  cursor: pointer;
+  background-color: #eeebeb;
+}
+
+#options a.used {
+  cursor: default;
+  background-color: #ececec;
+  border-color: #858585;
+  color: #858585;
 }
 
 .edit-container {
